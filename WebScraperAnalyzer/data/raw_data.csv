@@ -1,0 +1,20 @@
+
+import csv
+
+# set headers for CSV file
+headers = ['title', 'price', 'rating']
+
+# list of data to write to CSV file
+rows = [
+    ['Product A', 19.99, 4.5],
+    ['Product B', 25.99, 4.2],
+    ['Product C', 16.99, 4.7],
+    ['Product D', 7.99, 3.9],
+    ['Product E', 12.99, 4.1]
+]
+
+# write data to CSV file
+with open('WebScraperAnalyzer/data/raw_data.csv', mode='w', newline='') as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(headers)
+    writer.writerows(rows)
